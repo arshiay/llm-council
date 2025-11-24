@@ -79,6 +79,21 @@ npm run dev
 
 Then open http://localhost:5173 in your browser.
 
+**Option 3: Docker**
+
+Build and run the containers with Docker Compose:
+
+```bash
+docker compose up --build
+```
+
+The services will be available at:
+
+- Frontend: http://localhost:5173
+- Backend: http://localhost:8001
+
+The frontend uses the `VITE_API_BASE` build argument/environment variable to locate the backend. By default, the compose file points it to `http://localhost:8001`.
+
 ## Tech Stack
 
 - **Backend:** FastAPI (Python 3.10+), async httpx, OpenRouter API
